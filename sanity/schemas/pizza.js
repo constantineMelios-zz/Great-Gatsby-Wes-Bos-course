@@ -49,15 +49,21 @@ export default {
     select: {
       title: 'name',
       media: 'image',
+      veg0: 'toppings.0.vegeterian',
+      veg1: 'toppings.1.vegeterian',
+      veg2: 'toppings.2.vegeterian',
+      veg3: 'toppings.3.vegeterian',
       topping0: 'toppings.0.name',
       topping1: 'toppings.1.name',
       topping2: 'toppings.2.name',
       topping3: 'toppings.3.name',
     },
     prepare: ({ title, media, veg0, veg1, veg2, veg3, ...toppings }) => {
+      const vegs = [veg0, veg1, veg2, veg3].filter((veg) => veg !== undefined);
+      const isVegeterian = vegs.reduce((response, topping) => topping, true);
       const tops = Object.values(toppings).filter(Boolean);
       return {
-        title,
+        title: `${title} ${isVegeterian ? '🌱' : ''} `,
         media,
         subtitle: tops.join(', '),
       };

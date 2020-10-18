@@ -1,4 +1,10 @@
 var plugins = [{
+      plugin: require('C:/Users/costa/OneDrive/Study/Development/Great-Gatsby-Wes-Bos-course/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('C:/Users/costa/OneDrive/Study/Development/Great-Gatsby-Wes-Bos-course/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"ug6ao2ax","dataset":"production","watchMode":true},
+    },{
       plugin: require('C:/Users/costa/OneDrive/Study/Development/Great-Gatsby-Wes-Bos-course/gatsby/gatsby-ssr'),
       options: {"plugins":[]},
     }]
