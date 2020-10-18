@@ -13,8 +13,8 @@ export default {
       description: 'Name of the Topping',
     },
     {
-      name: 'vegeterian',
-      title: 'Vegeterian',
+      name: 'vegetarian',
+      title: 'Vegetarian',
       type: 'boolean',
       options: {
         layout: 'checkbox',
@@ -24,10 +24,10 @@ export default {
   preview: {
     select: {
       name: 'name',
-      vegeterian: 'vegeterian',
+      vegetarian: 'vegetarian',
     },
-    prepare: ({ name, vegeterian }) => ({
-      title: `${name} ${vegeterian ? '🌱' : ''} `,
+    prepare: ({ name, vegetarian }) => ({
+      title: `${name} ${vegetarian ? '🌱' : ''} `,
     }),
   },
 };
